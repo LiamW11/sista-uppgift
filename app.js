@@ -19,6 +19,7 @@ function addTask(e) {
   };
   
   tasks.push(task);
+  renderTasks(); 
   
   nameInput.value = '';
   ageInput.value = 0;
@@ -26,3 +27,29 @@ function addTask(e) {
 
 // Lyssna på form submit
 form.addEventListener('submit', addTask);
+
+// Rendera tasks
+function renderTasks() {
+  taskContainer.innerHTML = '';
+  
+  tasks.forEach(task => {
+    const taskDiv = document.createElement('div');
+    taskDiv.className = 'task-item';
+    taskDiv.innerHTML = `
+      <div>
+        <strong>${task.name}</strong> - Ålder: ${task.age}
+      </div>
+      <div>
+        <button onclick="toggleComplete(${task.id})">Klar</button>
+        <button onclick="deleteTask(${task.id})">Ta bort</button>
+      </div>
+    `;
+    
+    if (task.completed) {
+      taskDiv.style.textDecoration = 'line-through';
+      taskDiv.style.opacity = '0.6';
+    }
+    
+    taskContainer.appendChild(taskDiv);
+  });
+}
