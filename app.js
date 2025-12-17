@@ -13,13 +13,15 @@ function addTask(e) {
   
   const task = {
     id: Date.now(),
-    name: nameInput.value,
+    name: nameInput.value ? nameInput.value : "Namnlös",
     age: ageInput.value,
     completed: false
   };
   
   tasks.push(task);
+  saveTasks();
   renderTasks(); 
+  document.getElementById("age-output").value = 0;
   
   nameInput.value = '';
   ageInput.value = 0;
@@ -58,11 +60,27 @@ function toggleComplete(id) {
   const task = tasks.find(t => t.id === id);
   if (task) {
     task.completed = !task.completed;
+    saveTasks();
     renderTasks();
   }
 }
 
 function deleteTask(id) {
   tasks = tasks.filter(t => t.id !== id);
+    saveTasks();
   renderTasks();
 }
+
+function saveTasks() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  const saved = localStorage.getItem('tasks');
+  if (saved) {
+    tasks = JSON.parse(saved);
+    renderTasks();
+  }
+}
+
+loadTasks();

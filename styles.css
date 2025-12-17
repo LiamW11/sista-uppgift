@@ -227,7 +227,7 @@ button:active {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* AVSIKTLIGT FEL - döljer hela sidan */
+/* AVSIKTLIGT FEL - döljer hela sidan *
 body {
   display: none;
 }
