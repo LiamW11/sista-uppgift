@@ -20,7 +20,7 @@ git revert ångrar en commit genom att skapa en ny commit fast med gammalt inneh
 
 **Git reset:**
 ```
-git reset går tillbaka till en föregående commit och gör den till den nyaste i commit historiken.
+git reset går tillbaka till en föregående commit och gör den till den nyaste i commithistoriken.
 ```
 
 ### När är det lämpligt att använda respektive kommando?
@@ -32,7 +32,7 @@ Det är bättre att använda git revert i situationer då du redan har delat ut 
 
 **Använd reset när:**
 ```
-Det är bättre att använda git reset när du jobbar lokalt och vill justera eller ta bort gammla commits som inte har blivit pushade.
+Det är bättre att använda git reset när du jobbar lokalt och vill justera eller ta bort gamla commits som inte har blivit pushade.
 ```
 
 ---
@@ -50,7 +50,7 @@ Orsak: h1 hade två olika texter
 Först pushades båda ändringarna upp.
 Sedan gick vi in på github och mergade ena branchen först, vilket inte hade några konflikter.
 Efter detta mergade vi den andra branchen och fick då en konflikt.
-Denna konflik löstes genom att gå in i githubs egna konflikhanterare och lösa konflikter genom att behålla båda texterna.
+Denna konflikt löstes genom att gå in i githubs egna konflikthanterare och lösa konflikter genom att behålla båda texterna.
 ```
 
 ### Vad lärde ni er om konflikthantering?
@@ -95,7 +95,7 @@ Vi växlade roller mellan varje del.
 
 ### Vad fungerade bra i samarbetet?
 ```
-Att vi satt brevid varanda och kunde hjälpa varandra fungerade bra. Att både kunde komma med förslag och insikter bidrog till att applikationen blev bättre.
+Att vi satt bredvid varanda och kunde hjälpa varandra fungerade bra. Att båda kunde komma med förslag och insikter bidrog till att applikationen blev bättre.
 ```
 
 ### Vad kan förbättras i samarbetet?
@@ -128,15 +128,15 @@ Skatta er kompetens 1–5 (1=osäker, 5=mycket säker)
 
 ### Vad fungerade bra?
 ```
-1. Sammarbetet i gruppen var bra.
+1. Samarbetet i gruppen var bra.
 2. Att byta roller mellan varje del fungerade också bra.
-3. Att kunna diskutera uppgiften och ta oss frammåt tillsammans.
+3. Att kunna diskutera uppgiften och ta oss framåt tillsammans.
 ```
 
 ### Vad var utmanande?
 ```
 1. Alla nya git-kommandon.
-2. Commit meddelanden.
+2. Commitmeddelanden.
 3. Hur man squashar.
 ```
 
@@ -164,12 +164,12 @@ Vi tänkte en enkel applikation där du kan mata in namn och ålder. Detta funge
 
 ### Hur strukturerade ni JavaScript-koden?
 ```
-Vi skapade en fil för allting. Det finns en funktion som ritar ut själva task-listan. Resteraden funktioner används i denna funktion för att kunna rita ut task-listan korrekt och spara den till localstorage.
+Vi skapade en fil för allting. Det finns en funktion som ritar ut själva task-listan. Resterande funktioner används i denna funktion för att kunna rita ut task-listan korrekt och spara den till localstorage.
 ```
 
 ### Hur löste ni LocalStorage-persistens?
 ```
-Vi skapade en funtkion som sparade alla tasks som man hade till localstorage. Denna funktion används sedan för att hämta alla sparade task och sedan rita ut dem i task-listan.
+Vi skapade en funktion som sparade alla tasks som man hade till localstorage. Denna funktion används sedan för att hämta alla sparade task och sedan rita ut dem i task-listan.
 ```
 
 ---
