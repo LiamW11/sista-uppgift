@@ -1,5 +1,6 @@
 // Array för att lagra tasks
 let tasks = [];
+let currentFilter = 'all';
 
 // Hämta element
 const form = document.querySelector('form');
@@ -33,8 +34,10 @@ form.addEventListener('submit', addTask);
 // Rendera tasks
 function renderTasks() {
   taskContainer.innerHTML = '';
+
+  const filteredTasks = getFilteredTasks();
   
-  tasks.forEach(task => {
+  filteredTasks.forEach(task => {
     const taskDiv = document.createElement('div');
     taskDiv.className = 'task-item';
     taskDiv.innerHTML = `
@@ -83,4 +86,27 @@ function loadTasks() {
   }
 }
 
+
+function setFilter(filter) {
+  currentFilter = filter;
+  
+  // Uppdatera aktiv knapp
+  document.querySelectorAll('#filter-buttons button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.getElementById(`filter-${filter}`).classList.add('active');
+  
+  renderTasks();
+}
+
+function getFilteredTasks() {
+  if (currentFilter === 'active') {
+    return tasks.filter(task => !task.completed);
+  } else if (currentFilter === 'completed') {
+    return tasks.filter(task => task.completed);
+  }
+  return tasks;
+}
+
 loadTasks();
+
