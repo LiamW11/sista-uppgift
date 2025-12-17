@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Welcome to My Website</h1>
+      <h1>Welcome to My Website</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
     <section>
-        <form>
-            <input type="text" placeholder="Skriv namn här" id="name">
-            <br>
-            <span>Ålder</span>
-                <input type="range" min="0" max="100" value="0" step="1" oninput="this.nextElementSibling.value = this.value" id="age"
-    />
-    <output>0</output>
-    <br>
-    <input type="submit">
-        </form>
+      <form>
+        <input type="text" placeholder="Skriv namn här" id="name" />
+        <br />
+        <span>Ålder</span>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="1"
+          oninput="this.nextElementSibling.value = this.value"
+          id="age"
+        />
+        <output>0</output>
+        <br />
+        <input type="submit" />
+      </form>
+      <div id="task-container">
+      </div>
     </section>
-</body>
+  </body>
 </html>
