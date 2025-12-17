@@ -34,8 +34,10 @@ form.addEventListener('submit', addTask);
 // Rendera tasks
 function renderTasks() {
   taskContainer.innerHTML = '';
+
+  const filteredTasks = getFilteredTasks();
   
-  tasks.forEach(task => {
+  filteredTasks.forEach(task => {
     const taskDiv = document.createElement('div');
     taskDiv.className = 'task-item';
     taskDiv.innerHTML = `
