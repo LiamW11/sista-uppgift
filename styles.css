@@ -252,3 +252,9 @@ button:active {
   border-color: var(--primary-color);
   transform: none;
 }
+
+#age-output {
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
