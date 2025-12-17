@@ -61,3 +61,8 @@ function toggleComplete(id) {
     renderTasks();
   }
 }
+
+function deleteTask(id) {
+  tasks = tasks.filter(t => t.id !== id);
+  renderTasks();
+}
